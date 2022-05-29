@@ -47,7 +47,7 @@ if will_rain:
     message = client.messages.create(
         body='Its going to rain today,bring an umbrella!',
         from_='+19302075053',
-        to='+15714519574'
+        to= os.environ.get("CELL_NUMBER")
     )
     print(message.status)
 
